@@ -1,0 +1,22 @@
+{
+  "name": "npy-dev",
+  "context": "..",
+  "dockerFile": ".\\Dockerfile",
+  "settings": {},
+  "extensions": [],
+  "runArgs": [
+    //"--network=network1",
+    //"--memory=10240m",
+    //"--memory-swap=10240m"
+    "--dns=114.114.114.114",
+    "--privileged"
+  ],
+  //   "mounts": [
+  //     "source=chezmoi,target=/root/.local/share/chezmoi,type=volume",
+  //     "source=repos,target=/root/repos,type=volume",
+  //     "source=vscode-extensions,target=/root/.vscode-server/extensions,type=volume",
+  //     "source=go-bin,target=/root/go/bin,type=volume"
+  //   ],
+  "remoteUser": "root"
+  //   "postStartCommand": "/usr/sbin/dockerd & /usr/sbin/sshd -D"
+}
