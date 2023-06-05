@@ -1,1 +1,1 @@
-FROM nanpangyou/npy-dev:20230601
+FROM nanpangyou/npy-dev:20230605-1
