@@ -17,6 +17,6 @@
   //     "source=vscode-extensions,target=/root/.vscode-server/extensions,type=volume",
   //     "source=go-bin,target=/root/go/bin,type=volume"
   //   ],
-  "remoteUser": "root"
+  // "remoteUser": "root"
   //   "postStartCommand": "/usr/sbin/dockerd & /usr/sbin/sshd -D"
 }
