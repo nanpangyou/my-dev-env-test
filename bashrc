@@ -1,1 +1,1 @@
-source ${ZDOTDIR:-$HOME}/.zprezto/init.zsh
+[ -f ~/.z_jump/z.sh ] && source ~/.z_jump/z.sh
