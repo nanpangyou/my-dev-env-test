@@ -33,9 +33,17 @@ ENV SHELL /bin/zsh
 
 # tools 生成ssh key
 RUN yes | pacman -S fzf openssh exa the_silver_searcher fd rsync &&\
-		ssh-keygen -t rsa -N '' -f /etc/ssh/ssh_host_rsa_key &&\
-		ssh-keygen -t dsa -N '' -f /etc/ssh/ssh_host_dsa_key
+	ssh-keygen -t rsa -N '' -f /etc/ssh/ssh_host_rsa_key &&\
+	ssh-keygen -t dsa -N '' -f /etc/ssh/ssh_host_dsa_key
 # end
+
+
+# add alias
+ADD bashrc /root/.bashrc
+RUN echo "[ -f /root/.bashrc ] && source /root/.bashrc" >> /root/.zshrc
+# end
+
+
 
 
 # z
@@ -45,6 +53,6 @@ RUN zsh -c 'git clone https://github.com/rupa/z.git /root/.z_jump'
 
 
 # dotfile
-ADD z_jump_script /root/.config/.z_jump_script
-RUN echo "[ -f /root/.config/.z_jump_script ] && source /root/.config/.z_jump_script" >> /root/.zshrc
+ADD z_jump_script /root/.config/z_jump_script
+RUN echo "[ -f /root/.config/z_jump_script ] && source /root/.config/z_jump_script" >> /root/.zshrc
 # end
