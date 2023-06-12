@@ -19,7 +19,10 @@ RUN yes | pacman -S git vim htop which tree curl zsh
 
 # 增加配置文件夹
 RUN mkdir .config
+# end
 
+# set volume
+VOLUME ["/root/.config","/root/repos","/root/.ssh","/root/.vscode-server/extensions"]
 # end
 
 # zsh prezto
